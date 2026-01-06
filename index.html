@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>秋天的主页</title>
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+      }
+
+      body {
+          background-color: #f9f7f2;
+          color: #5c4b37;
+          line-height: 1.6;
+          padding: 20px;
+          max-width: 1000px;
+          margin: 0 auto;
+          background-image: linear-gradient(to bottom, #fff9f0, #f9f7f2);
+      }
+
+      h1 {
+          text-align: center;
+          color: #e67e22;
+          font-size: 2.8rem;
+          margin: 20px 0;
+          padding-bottom: 15px;
+          border-bottom: 3px solid #f1c40f;
+      }
+
+      hr {
+          border: none;
+          height: 2px;
+          background: linear-gradient(to right, transparent, #f1c40f, transparent);
+          margin: 30px auto;
+          width: 80%;
+      }
+
+      h2 {
+          color: #d35400;
+          margin: 25px 0 15px;
+          padding: 10px 0;
+          border-bottom: 2px dashed #f1c40f;
+          font-size: 1.8rem;
+      }
+
+      h2.a {
+          background-color: #fff5e6;
+          padding: 10px 15px;
+          border-radius: 8px;
+          border-left: 5px solid #e67e22;
+      }
+
+      h2.b {
+          background-color: #e8f4f8;
+          padding: 10px 15px;
+          border-radius: 8px;
+          border-left: 5px solid #f8bb74;
+      }
+
+      h2.c {
+          background-color: #f0f8e8;
+          padding: 10px 15px;
+          border-radius: 8px;
+          border-left: 5px solid #b4c137;
+      }
+
+      img {
+          border-radius: 15px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          margin: 10px 0;
+          border: 5px solid white;
+      }
+
+      p {
+          margin: 15px 0;
+          font-size: 1.1rem;
+          line-height: 1.8;
+      }
+
+      strong {
+          color: #e67e22;
+          font-weight: bold;
+      }
+
+      ul, ol {
+          margin: 15px 0 15px 30px;
+          padding: 15px;
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      }
+
+      li {
+          margin: 10px 0;
+          padding-left: 5px;
+          font-size: 1.1rem;
+      }
+
+      ul li {
+          list-style-type: '🐾 ';
+      }
+
+      ol li {
+          list-style-type: '⭐ ';
+      }
+
+      a {
+          color: #e74c3c;
+          text-decoration: none;
+          font-weight: bold;
+          padding: 5px 10px;
+          border-radius: 5px;
+          background-color: #ffece8;
+          display: inline-block;
+          margin: 5px 0;
+          transition: all 0.3s ease;
+      }
+
+      a:hover {
+          background-color: #e74c3c;
+          color: white;
+          transform: translateY(-2px);
+      }
+
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 20px 0;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      }
+
+      table th {
+          background-color: #e67e22;
+          color: white;
+          padding: 15px;
+          text-align: center;
+          font-weight: bold;
+      }
+
+      table th img {
+          border: none;
+          box-shadow: none;
+      }
+
+      table tr:nth-child(even) {
+          background-color: #fff9f0;
+      }
+
+      table tr:nth-child(odd) {
+          background-color: white;
+      }
+
+      table th:only-child {
+          background-color: white;
+      }
+
+      form {
+          background-color: white;
+          padding: 25px;
+          border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+          margin: 20px 0;
+      }
+
+      label {
+          display: block;
+          margin: 15px 0 8px;
+          color: #5c4b37;
+          font-weight: bold;
+          font-size: 1.1rem;
+      }
+
+      input, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 2px solid #f1c40f;
+          border-radius: 6px;
+          font-size: 1rem;
+          transition: border-color 0.3s;
+      }
+
+      input:focus, textarea:focus {
+          outline: none;
+          border-color: #e67e22;
+          box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+      }
+
+      button {
+          background-color: #e67e22;
+          color: white;
+          border: none;
+          padding: 12px 30px;
+          font-size: 1.1rem;
+          border-radius: 6px;
+          cursor: pointer;
+          font-weight: bold;
+          margin-top: 15px;
+          transition: all 0.3s ease;
+      }
+
+      button:hover {
+          background-color: #d35400;
+          transform: translateY(-2px);
+          box-shadow: 0 5px 10px rgba(230, 126, 34, 0.3);
+      }
+
+      @media (max-width: 768px) {
+          body {
+              padding: 15px;
+          }
+
+          h1 {
+              font-size: 2.2rem;
+          }
+
+          h2 {
+              font-size: 1.5rem;
+          }
+
+          img {
+              max-width: 100%;
+              height: auto;
+          }
+
+          table, table th, table td {
+              display: block;
+          }
+
+          table th {
+              margin-top: 10px;
+          }
+      }
+  </style>
+</head>
+<body>
+<h1>欢迎来到秋天的个人主页</h1>
+<hr>
+<h2 id="1" class="a">关于我</h2>
+<img src="qiutian.jpg" alt="我的照片" width="400" height="300">
+<p>大家好！我是<strong>秋天</strong>。今年2岁了,是一只金渐层小猫。<br>我最喜欢睡觉和玩毛球，是一只调皮小猫。</p>
+<br>
+<h2 id="2" class="a">我的技能</h2>
+
+<ul>
+  <li>踩奶按摩师</li>
+  <li>捉迷藏专家</li>
+  <li>保暖小毛球</li>
+</ul>
+<h2>我的特点</h2>
+
+<ol>
+  <li>脾气好不生气</li>
+  <li>脸ber圆滚滚</li>
+  <li>喜欢咕噜咕噜</li>
+</ol>
+<h2 id="3" class="a">在哪里可以找到我</h2>
+<p>微博-></p><a  href="https://www.weibo.com/">点击访问</a>
+<p>百度-></p><a  href="https://www.baidu.com/">点击访问</a>
+
+<h2 id="5" class="c">个人展示</h2>
+<table border="3">
+  <tr>
+    <th><img src="qiutian1.jpg" alt="我的照片" width="260" height="340"></th>
+    <th><img src="qiutian2.jpg" alt="我的照片" width="260" height="340"></th>
+    <th><img src="qiutian3.jpg" alt="我的照片" width="260" height="340"></th>
+
+  </tr>
+
+</table>
+<h2 id="4" class="b">联系我</h2>
+<table border="3">
+  <tr>
+    <th>邮箱</th>
+    <th>地址</th>
+    <th>电话</th>
+
+  </tr>
+  <tr>
+    <th>1289374@qq.com</th>
+    <th>重庆市巴南区</th>
+    <th>1133256</th>
+
+</table>
+<hr>
+<h2>表单</h2>
+<form>
+  <p>
+    <label>你的名字：</label><br>
+    <input type="text" name="name">
+  </p>
+  <p>
+    <label>你的邮箱：</label><br>
+    <input type="text" name="name">
+  </p>
+  <p>
+    <label>留⾔内容：</label><br>
+    <textarea name="message" rows="4"></textarea>
+  </p>
+  <p>
+    <button type="submit">提交</button>
+  </p>
+</form>
+</body>
+</html>
